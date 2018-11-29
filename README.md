@@ -39,12 +39,12 @@ ggplot(my_pcal_1, aes(y=Power, x=N_Imputed, linetype = Population, colour=factor
 	geom_line() + scale_x_log10() + facet_grid(~Array)
 ```
 
-![alt text](https://raw.githubusercontent.com/corbinq/APSIS/example_plots/plot1.png)
+![alt text](https://github.com/corbinq/APSIS/blob/master/example_plots/plot1.png)
 
 
 #### Comparing Across Disease Models
 
-Use diseaseModelList to compare results across disease model parameters:
+Use diseaseModelList() to specify multiple disease models and compare results across parameter values:
 
 ```
 my_model_list <- diseaseModelList(maf = (10^seq(-3,-2, 0.02)), rr= c(1.5,1.7,2.5), prev = 0.01)
@@ -57,7 +57,7 @@ my_pcal_2 <- apsisPower(my_model_list,
 )
 ```
 
-Visualize power as a function of disease model parameters:
+Visualize power as a function of disease parameters:
 
 ```
 library(ggplot2)
@@ -65,4 +65,4 @@ ggplot(my_pcal_2, aes(y=Power, x=MAF, colour=factor(EffSize), linetype=factor(N_
 	geom_line() + scale_x_log10() 
 ```
 
-![alt text](https://raw.githubusercontent.com/corbinq/APSIS/example_plots/plot2.png)
+![alt text](https://github.com/corbinq/APSIS/blob/master/example_plots/plot2.png)
