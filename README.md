@@ -4,9 +4,13 @@ APSIS calculates statistical power for genome-wide association studies (GWAS) us
 
 #### Getting Started 
 ```
+Load the source code and data (~28MB, which may take a moment):
+
 ## note: apsis requires the 'data.table' library
 source('apsis.r')
 ```
+
+#### Calculating and Visualizing Power
 
 Use diseaseModel() to specify effect size, minor allele frequency (MAF), and other parameters
 
@@ -35,6 +39,11 @@ ggplot(my_pcal_1, aes(y=Power, x=N_Imputed, linetype = Population, colour=factor
 	geom_line() + scale_x_log10() + facet_grid(~Array)
 ```
 
+![alt text](https://raw.githubusercontent.com/corbinq/APSIS/example_plots/plot1.png)
+
+
+#### Comparing Across Disease Models
+
 Use diseaseModelList to compare results across disease model parameters:
 
 ```
@@ -56,3 +65,4 @@ ggplot(my_pcal_2, aes(y=Power, x=MAF, colour=factor(EffSize), linetype=factor(N_
 	geom_line() + scale_x_log10() 
 ```
 
+![alt text](https://raw.githubusercontent.com/corbinq/APSIS/example_plots/plot2.png)
