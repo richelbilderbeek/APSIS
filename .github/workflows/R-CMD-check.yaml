@@ -16,8 +16,10 @@ jobs:
 
       - uses: r-lib/actions/setup-r@v1
 
-      - name: Install
-        run: intall.packages("data.table")
+      - name: Install dependencies
+        run: |
+          install.packages(c("remotes", "rcmdcheck"))
+          remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
 
       - name: Run
