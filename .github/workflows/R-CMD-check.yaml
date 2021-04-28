@@ -1,0 +1,26 @@
+# For help debugging build failures open an issue on the RStudio community with the 'github-actions' tag.
+# https://community.rstudio.com/new-topic?category=Package%20development&tags=github-actions
+on:
+  push:
+  pull_request:
+
+name: R-CMD-check
+
+jobs:
+  R-CMD-check:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: r-lib/actions/setup-r@v1
+
+      - name: Install
+        run: intall.packages("data.table")
+        shell: Rscript {0}
+
+      - name: Run
+        run: source("apsis.r")
+        shell: Rscript {0}
+
