@@ -23,6 +23,5 @@ jobs:
         shell: Rscript {0}
 
       - name: Run
-        run: source("apsis.r")
-        shell: Rscript {0}
+        shell: Rscript run.R
 

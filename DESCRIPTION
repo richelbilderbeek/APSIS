@@ -11,4 +11,6 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    data.table
+    data.table,
+    dply,
+    ggplot2
