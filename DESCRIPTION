@@ -9,7 +9,6 @@ Description:
     This repo runs the examples of that tool.
 License: GPL-3
 Encoding: UTF-8
-LazyData: true
 Imports: 
     data.table,
     dplyr,
