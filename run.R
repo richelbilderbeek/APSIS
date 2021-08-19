@@ -38,7 +38,7 @@ ggplot2::ggplot(t, ggplot2::aes(x = Array, y = power_per_dollar, fill = Populati
   ggplot2::theme(
     axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust = 1),
     text = ggplot2::element_text(size = 16)
-  ) + ggplot2::ggsave("power_per_dollar_per_array.png", width = 7, height = 7)
+  ) ; ggplot2::ggsave("power_per_dollar_per_array.png", width = 7, height = 7)
 
 
 
@@ -50,5 +50,5 @@ ggplot2::ggplot(t, ggplot2::aes(x = n_snps, y = power_per_dollar, color = Popula
   ggplot2::theme(
     axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust = 1),
     text = ggplot2::element_text(size = 16)
-  ) + ggplot2::ggsave("power_per_dollar_per_n_snps.png", width = 7, height = 7)
+  ) ; ggplot2::ggsave("power_per_dollar_per_n_snps.png", width = 7, height = 7)
 
